@@ -1,0 +1,32 @@
+h2 {
+    color: darkred;
+}
+
+#AboutTitle {
+    color:rgb(94, 1, 94);
+    font-family: cursive;
+    font-size: 50px;
+    
+}
+
+header {
+    background-color:rgb(58, 5, 75);
+    height: 100%;
+    
+    
+}
+
+nav {
+    background-color:rgb(245, 245, 203);
+    height: 100%;
+}
+
+section {
+    background-color:rgb(245, 146, 161);
+    height: 100%;
+}
+
+footer {
+    background-color: rgb(58, 5, 75);
+    height: 400px;
+}

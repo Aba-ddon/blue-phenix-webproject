@@ -1,0 +1,150 @@
+body{
+
+    background-image: url("https://wallpapers.com/images/hd/space-ship-digital-art-r8tt3e162a3insvn.jpg");
+    background-position: center;
+    background-size: 100%;
+}
+
+#header{
+
+    width: 100%;
+    height: 100px;
+
+    background-color: rgba(4, 9, 34, 0.7);
+}
+
+#icon{
+
+    margin-left: 10px;
+}
+
+#navigation{
+
+    width: 100%;
+    height: 40px;
+
+    background-color: rgba(126, 141, 134, 0.5);
+    
+}
+
+#banner{
+
+    width: 100%;
+    height: 200px;
+
+    font-weight: bolder;
+    font-size: 40px;
+    color: rgb(250, 223, 223);
+}
+
+#main{
+
+    width: 100%;
+    height: 200px;
+    
+
+}
+
+#right{
+
+    width: 700px;  
+    height: 200px;
+
+    margin-top: 10px;
+    margin-right:  250px;
+    float: right;
+    background-color: rgb(36, 35, 35, .5);
+}
+
+#ttext{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#about{
+
+    font-weight: bolder;
+    color: rgb(247, 247, 222);
+    font-size: 20px;
+}
+
+
+#content{
+
+    font-weight: bolder;
+    color: rgb(247, 247, 222);
+}
+
+#left{
+
+    width: 500px;  
+    height: 200px;
+    border: 4px solid black;
+    margin-top: 10px;
+    margin-left:  250px;
+    float: left;
+}
+
+#main2{
+
+    width: 100%;
+    height: 300px;
+
+}
+
+
+
+input{
+
+    width: 400px;
+    height: 30px;
+}
+
+textarea{
+    width: 405px;
+    height: 90px;
+    margin-left: 60px;
+}
+
+
+#contact{
+
+    font-size: 30px;
+    font-weight: bolder;
+    
+}
+
+#enter{
+
+    width: 60px;   
+    height: 30px; 
+    margin-bottom: 20px;
+}
+
+#footer{
+
+    width: 100%;
+    height: 100px;
+    color: white;
+    background-color: rgba(4, 9, 34, 0.7);
+    font-weight: bolder;
+}
+
+button{
+
+    margin-left: 50px;
+    background-color: transparent;
+    border: 0;
+    font-weight: bolder;
+    color: rgb(241, 208, 208);
+    font-size: 20px;
+}
+
+
+#color{
+    color: rgb(245, 247, 136);
+}
+
+#astro{
+
+    display:
+}
