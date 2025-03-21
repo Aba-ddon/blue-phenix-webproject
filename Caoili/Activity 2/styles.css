@@ -26,10 +26,11 @@ nav ul li:hover .dropdown {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 30px 50px;
+    height: 100px;
     background-color: #043873;
     position: fixed;
-    opacity: .8;
+    width: 100%;
+    opacity: 0.9;
 }
 
 .logo {
