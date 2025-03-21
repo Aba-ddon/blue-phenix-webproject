@@ -28,6 +28,8 @@ nav ul li:hover .dropdown {
     align-items: center;
     padding: 30px 50px;
     background-color: #043873;
+    position: fixed;
+    opacity: .8;
 }
 
 .logo {
