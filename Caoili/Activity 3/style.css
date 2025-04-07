@@ -1,6 +1,4 @@
-*{
-    border: 1px solid red;
-}
+
 
 @media screen and (width <= 375px) {
     body{
@@ -34,6 +32,9 @@
         width: 50px;
         display: flex;
         
+    }
+    #divrefs{
+        display: none;
     }
 
     #Header {
