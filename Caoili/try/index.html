@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fresh Harvest Inc.</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        Fresh Harvest Inc.
+    </header>
+
+    <center><h3>Fresh Harvest Inc. is a small business dedicated to providing high-quality, farm-fresh meals to local communities. 
+        Established in 2012, the business was founded with a mission to make nutritious and affordable meals accessible to households, small restaurants, and food vendors</h3></center>
+
+    <div class="container" id="mealContainer"></div>
+  <div class="conts"><form id="orderForm">
+    <h2>Order Meal</h2>
+    <input type="text" id="mealName" placeholder="Meal Name" readonly required />
+    <img id="mealImage" src="" alt="Meal" />
+    <input type="number" id="quantity" placeholder="Quantity" required />
+    <input type="number" id="price" placeholder="Price" required />
+    <input type="text" id="buyerName" placeholder="Name of Buyer" required />
+    <input type="text" id="mobile" placeholder="Mobile Number" maxlength="11" required />
+    <button type="submit">Submit</button></div>
+  </form>
+  <script>
+    const mealContainer = document.getElementById('mealContainer');
+    const form = document.getElementById('orderForm');
+    const mealNameInput = document.getElementById('mealName');
+    const mealImageInput = document.getElementById('mealImage');
+    const quantityInput = document.getElementById('quantity');
+    const priceInput = document.getElementById('price');
+    const buyerNameInput = document.getElementById('buyerName');
+    const mobileInput = document.getElementById('mobile');
+    fetch('https://www.themealdb.com/api/json/v1/1/search.php?f=a')
+      .then(res => res.json())
+      .then(data => {
+        data.meals.forEach(meal => {
+          const card = document.createElement('div');
+          card.className = 'meal-card';
+          card.innerHTML = `
+            <img src="${meal.strMealThumb}" alt="${meal.strMeal}" />
+            <h3>${meal.strMeal}</h3>
+            <p>${meal.strCategory}</p>
+            <button onclick='orderMeal(${JSON.stringify(meal)})'>Order Item</button>
+          `;
+          mealContainer.appendChild(card);
+        });
+      });
+    function orderMeal(meal) {
+      mealNameInput.value = meal.strMeal;
+      mealImageInput.src = meal.strMealThumb;
+    }
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      const quantity = quantityInput.value.trim();
+      const price = priceInput.value.trim();
+      const name = buyerNameInput.value.trim();
+      const mobile = mobileInput.value.trim();
+      if (!mealNameInput.value || !mealImageInput.src || !quantity || !price || !name || !mobile) {
+        alert('All fields are required.');
+        return;
+      }
+      if (!/^\d+$/.test(quantity) || !/^\d+$/.test(price)) {
+        alert('Price and Quantity should be numeric.');
+        return;
+      }
+      if (!/^[a-zA-Z\s]+$/.test(name)) {
+        alert('Name of Buyer should only contain letters.');
+        return;
+      }
+      if (mobile.length > 11 || !/^\d+$/.test(mobile)) {
+        alert('Mobile number should be numeric and max 11 characters.');
+        return;
+      }
+      alert('Your order placed successfully');
+      form.reset();
+      mealImageInput.src = '';
+    });
+  </script>
+  <footer>Caoili, Joshua G.. All Rights Reserved.</footer>
+</body>
+</html>
